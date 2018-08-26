@@ -11,3 +11,11 @@
     components: { ThemeLayout }
   };
 </script>
+
+<style lang="stylus">
+  @import url('https://fonts.googleapis.com/css?family=Work+Sans')
+
+  body
+    margin: 0
+    font-family: 'Work Sans', sans-serif
+</style>
