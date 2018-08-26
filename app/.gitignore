@@ -1,0 +1,9 @@
+# Módulos do Node.js.
+node_modules/
+
+# Arquivos de Log.
+*.log
+*.log.*
+
+# Arquivos de distribuição.
+dist/

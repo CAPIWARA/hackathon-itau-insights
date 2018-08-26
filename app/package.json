@@ -1,0 +1,13 @@
+{
+  "name": "hackathon-itau-insights-app",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Solução para o hackathon, Hackathon Itaú Insights, realizado nos dias 25 e 26 de agosto.",
+  "main": "src/index.js",
+  "repository": "https://github.com/VitorLuizC/hackathon-itau-insights",
+  "author": {
+    "url": "https://vitorluizc.github.io/",
+    "name": "Vitor Luiz Cavalcanti",
+    "email": "vitorluizc@outlook.com"
+  }
+}
