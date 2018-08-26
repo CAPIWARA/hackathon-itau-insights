@@ -57,6 +57,7 @@
 <style lang="stylus">
   .ProjectCard
     overflow: hidden
+    box-shadow: 0 0 10px rgba(#000, .3)
 
     > .banner
       min-width: 100%

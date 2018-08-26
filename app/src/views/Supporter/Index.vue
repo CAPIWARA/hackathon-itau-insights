@@ -1,13 +1,6 @@
 <template>
   <section class="SupporterScreen">
     <h1>Apoiador</h1>
-
-    <project-card
-      name="Afro Bella"
-      :goal="30000"
-      :collected="20400"
-      :banner="Banner"
-    />
   </section>
 </template>
 

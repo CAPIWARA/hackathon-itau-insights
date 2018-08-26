@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "vue": "^2.5.17",
+    "vue-carousel": "^0.11.0",
     "vue-router": "^3.0.1"
   }
 }
