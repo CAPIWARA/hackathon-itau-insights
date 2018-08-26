@@ -4,6 +4,8 @@ import (
 	"hackathon-itau-insights/server/bd"
 )
 
+var db = bd.MongoBuilder("user")
+
 //Testing new design pattern
 type User struct {
 	Id         string `structs:"_id" json:"-" bson:"_id"`
@@ -53,7 +55,7 @@ type Phone struct {
 }
 
 func (user *User) Save() error {
-	id, err := bd.Save(user)
+	id, err := db.Save(user)
 	user.Id = id
 
 	return err
