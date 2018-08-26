@@ -5,9 +5,20 @@
   "description": "Solução para o hackathon, Hackathon Itaú Insights, realizado nos dias 25 e 26 de agosto.",
   "main": "src/index.js",
   "repository": "https://github.com/VitorLuizC/hackathon-itau-insights",
+  "scripts": {
+    "start": "poi src/index.js",
+    "build": "poi build src/index.js"
+  },
   "author": {
     "url": "https://vitorluizc.github.io/",
     "name": "Vitor Luiz Cavalcanti",
     "email": "vitorluizc@outlook.com"
+  },
+  "devDependencies": {
+    "poi": "^10.2.10",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "dependencies": {
+    "vue": "^2.5.17"
   }
 }
