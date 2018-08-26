@@ -1,0 +1,33 @@
+# source: http://10.90.87.163:3000/graphql
+# timestamp: Sun Aug 26 2018 10:33:46 GMT-0300 (Horário Padrão de Brasília)
+
+schema {
+  query: rootQuery
+  mutation: rootMutation
+}
+
+# rootMutation
+type rootMutation {
+  # create project
+  createProject: typeProject
+}
+
+# rootQuery
+type rootQuery {
+  # get project
+  project(projectId: String!): typeProject
+
+  # get user
+  user: typeUser
+}
+
+type typeProject {
+  createdBy: String
+  id: String
+}
+
+type typeUser {
+  email: String
+  id: String
+  name: String
+}

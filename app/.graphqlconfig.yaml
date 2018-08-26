@@ -1,0 +1,6 @@
+projects:
+  Hackathon Itaú Insights:
+    schemaPath: src/schema.graphql
+    extensions:
+      endpoints:
+        default: 'http://10.90.87.163:3000/graphql'
