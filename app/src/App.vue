@@ -13,9 +13,14 @@
 </script>
 
 <style lang="stylus">
-  @import url('https://fonts.googleapis.com/css?family=Work+Sans')
+  @import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400,700')
+
+  *
+  *::after
+  *::before
+    box-sizing: border-box
 
   body
     margin: 0
-    font-family: 'Work Sans', sans-serif
+    font-family: 'Comfortaa', sans-serif
 </style>

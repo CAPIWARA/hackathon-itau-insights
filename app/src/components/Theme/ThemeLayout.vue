@@ -1,5 +1,11 @@
 <template>
   <section class="ThemeLayout">
+    <header class="header">
+      <img src="~@/assets/icons/Options@2x.png" class="options" />
+
+      <img src="~@/assets/images/Logo@2x.png" class="logo" />
+    </header>
+
     <main class="main">
       <slot />
     </main>
@@ -10,8 +16,8 @@
         class="link"
         active-class="-active"
       >
-        <img src="@/assets/icons/Donate@2x.png" class="icon" />
-        <span class="text">Apoiar</span>
+        <img src="~@/assets/icons/Donate@2x.png" class="icon" />
+        <span class="text">Apoie</span>
       </router-link>
 
       <router-link
@@ -19,7 +25,7 @@
         class="link"
         active-class="-active"
       >
-        <img src="@/assets/icons/House@2x.png" class="icon" />
+        <img src="~@/assets/icons/House@2x.png" class="icon" />
         <span class="text">Início</span>
       </router-link>
 
@@ -28,8 +34,8 @@
         class="link"
         active-class="-active"
       >
-        <img src="@/assets/icons/PigBank@2x.png" class="icon" />
-        <span class="text">Campanha</span>
+        <img src="~@/assets/icons/PigBank@2x.png" class="icon" />
+        <span class="text">Projetos</span>
       </router-link>
     </nav>
   </section>
@@ -40,6 +46,22 @@
   $ThemeLayout-menu-border-color = rgba(#646464, .6)
 
   .ThemeLayout
+    > .header
+      height: 47px
+      display: flex
+      padding: 0 15px
+      align-items: center
+      justify-content: center
+      background-color: #006A34
+
+      > .options
+        left: 15px
+        height: 16px
+        position: absolute
+
+      > .logo
+        width: 100px
+
     > .main
       margin-bottom: $ThemeLayout-menu-size
 
