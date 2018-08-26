@@ -27,6 +27,7 @@ var mutation = graphql.NewObject(
 		Description: "rootMutation",
 		Fields: graphql.Fields{
 			"createProject": fieldCreateProject,
+			"checkout":      fieldCheckout,
 		},
 	},
 )

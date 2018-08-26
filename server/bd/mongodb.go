@@ -34,3 +34,11 @@ func (db *MongoCollection) Save(obj interface{}) (string, error) {
 
 	return id.Hex(), nil
 }
+
+func (db *MongoCollection) FindByField(field, value string) (interface{}, error) {
+	var reader map[string]interface{}
+	if err := db.m.Find(bson.M{field: value}).All(&reader); err != nil {
+		return nil, err
+	}
+	return reader, nil
+}

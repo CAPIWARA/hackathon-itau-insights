@@ -32,3 +32,23 @@ var fieldPayment = &graphql.Field{
 	Description: "get payments by project",
 	Resolve:     GetPayments,
 }
+
+var fieldCheckout = &graphql.Field{
+	Type:        typePayment,
+	Description: "checkout",
+	Args: graphql.FieldConfigArgument{
+		"amount": &graphql.ArgumentConfig{
+			Type: graphql.NewNonNull(graphql.Int),
+		},
+		"ccnumber": &graphql.ArgumentConfig{
+			Type: graphql.NewNonNull(graphql.String),
+		},
+		"ccholdername": &graphql.ArgumentConfig{
+			Type: graphql.NewNonNull(graphql.String),
+		},
+		"expt": &graphql.ArgumentConfig{
+			Type: graphql.NewNonNull(graphql.String),
+		},
+	},
+	Resolve: Checkout, 
+}
