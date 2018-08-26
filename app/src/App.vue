@@ -23,4 +23,5 @@
   body
     margin: 0
     font-family: 'Comfortaa', sans-serif
+    background-color: #F1F1F1
 </style>
