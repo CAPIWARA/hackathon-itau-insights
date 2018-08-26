@@ -11,14 +11,22 @@ var Schema, _ = graphql.NewSchema(graphql.SchemaConfig{
 
 var query = graphql.NewObject(
 	graphql.ObjectConfig{
-		Name:        "query",
-		Description: "query",
-		Fields:      graphql.Fields{},
+		Name:        "rootQuery",
+		Description: "rootQuery",
+		Fields: graphql.Fields{
+			"user":     fieldGetUser,
+			"project":  fieldGetProject,
+			"payments": fieldPayment,
+		},
 	},
 )
 
 var mutation = graphql.NewObject(
 	graphql.ObjectConfig{
-		Name:        "mutation",
-		Description: "mutation",
-		Fields:      graphql.Fields{}})
+		Name:        "rootMutation",
+		Description: "rootMutation",
+		Fields: graphql.Fields{
+			"createProject": fieldCreateProject,
+		},
+	},
+)

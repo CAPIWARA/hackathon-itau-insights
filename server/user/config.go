@@ -4,11 +4,9 @@ import (
 	"hackathon-itau-insights/server/bd"
 )
 
-var db = bd.MongoBuilder("user")
-
 //Testing new design pattern
 type User struct {
-	Id         string `structs:"_id" json:"-" bson:"_id"`
+	Id         string `structs:"id" json:"-" bson:"id"`
 	Name       string `json:"name"`
 	Email      string `json:"email"`
 	Gender     string `json:"gender"`
@@ -55,44 +53,9 @@ type Phone struct {
 }
 
 func (user *User) Save() error {
-	id, err := db.Save(user)
+	m := bd.MongoBuilder("user")
+	id, err := m.Save(user)
 	user.Id = id
 
 	return err
-}
-
-var Marcos = User{
-	Name:  "Marcos Vinicius",
-	Email: "marcos@capiwara.com.br",
-	Account: &Account{
-		Agencia:        "0048",
-		AgenciaDv:      "1",
-		Conta:          "48800",
-		ContaDv:        "1",
-		BankCode:       "341",
-		DocumentNumber: "46996939895",
-		LegalName:      "MARCOS V CARDOSO",
-		AccountId:      17883361,
-	},
-	CreditCard: &CreditCard{
-		CCId:       "card_cjlagrqkf00bl836dtueuoz7o",
-		Number:     "4242424242424242",
-		HolderName: "Marcos Vinicius Capi",
-		Exp:        "1018",
-	},
-	Address: &Address{
-		Street:        "Rua de exemplo",
-		StreetNumber:  "808",
-		Neighborhood:  "Bairro de exemplo",
-		Complementary: "Apartamento 8",
-		City:          "Cidade",
-		State:         "Lordaeron",
-		Zipcode:       "47850000",
-		Country:       "Lordaeron",
-	},
-	Phone: &Phone{
-		Ddd:    "88",
-		Ddi:    "88",
-		Number: "945597088",
-	},
 }

@@ -9,13 +9,12 @@ type Payment struct {
 	ProjectId     string
 }
 
-var db = bd.MongoBuilder("user")
-
 func Save(transactioniD, userId, projectId string) (string, error) {
 	pay := Payment{
 		TransactionId: transactioniD,
 		UserId:        userId,
 		ProjectId:     projectId,
 	}
-	return db.Save(pay)
+	m := bd.MongoBuilder("payment")
+	return m.Save(pay)
 }
