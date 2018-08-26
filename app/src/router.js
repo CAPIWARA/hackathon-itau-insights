@@ -8,11 +8,31 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      component: () => import('@/views/Home')
+      component: () => import('@/views/Splash')
     },
     {
-      path: '/sign-in',
-      component: () => import('@/views/SignIn')
+      path: '/profile',
+      component: () => import('@/views/Profile')
+    },
+    {
+      path: '/supporter',
+      component: () => import('@/views/Supporter/Container'),
+      children: [
+        {
+          path: '',
+          component: () => import('@/views/Supporter/Index')
+        }
+      ]
+    },
+    {
+      path: '/entrepreneur',
+      component: () => import('@/views/Entrepreneur/Container'),
+      children: [
+        {
+          path: '',
+          component: () => import('@/views/Entrepreneur/Index')
+        }
+      ]
     }
   ]
 });
